@@ -46,5 +46,18 @@ const typeDefs = gql`
         "Module Length (in minutes)"
         length: Int
     }
+    type Mutation {
+        incrementTrackViews(id: ID!): IncrementTrackViewsResponse!
+    }
+    type IncrementTrackViewsResponse{
+        "Status of mutation (think HTTP status code)"
+        code: Int!
+        "Indicates if mutation worked"
+        success: Boolean!
+        "UI message"
+        message: String!
+        "updated track"
+        track: Track
+    }
 `;
 module.exports = typeDefs

@@ -6,7 +6,7 @@ import {ApolloClient, InMemoryCache, ApolloProvider} from '@apollo/client'
 
 const client = new ApolloClient({
   //options go here
-  uri: 'http://localhost:4000',
+  uri: 'https://what-the-dog-doin.herokuapp.com/',
   cache: new InMemoryCache()
 })
 
